@@ -1,2 +1,5 @@
 # k8sexample
-Example apps for K8s
+
+Example apps build for K8s
+
+This example app will use golang.
