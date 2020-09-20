@@ -67,6 +67,7 @@ test:
 	@echo "-------------------------------------------"
 	@curl -i http://localhost:3000/ping
 	@echo "\n"
+	@robot get-request.robot
 	@echo "-------------------------------------------"
 
 ## build-cross: Compiles the Go source file for every OS and Platform Architecture
