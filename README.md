@@ -8,7 +8,7 @@ Makefile is used for housekeeping purpose.
 3.  Formats the Go source file
 4.  Executes the Go source file without generating binaries
 5.  Compiles the Go source file & generates go binaries
-6.  Tests the Go binary 
+6.  Tests the Go binary using cURL, Robot Framework & RestInstance
 7.  Compiles the Go source file for every OS and Platform Architecture
 8.  Executes the Go binary
 9.  Generate docker image
@@ -19,6 +19,3 @@ Future tasks:
 1. Create k8s yaml for this app
 2. create helm chart
 3. Add observability & CI/CD concepts
-4. Robot Framework test case 
-
-
