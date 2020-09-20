@@ -19,5 +19,6 @@ Future tasks:
 1. Create k8s yaml for this app
 2. create helm chart
 3. Add observability & CI/CD concepts
+4. Robot Framework test case 
 
 
