@@ -73,8 +73,8 @@ test:
 build-cross:
 	@echo "-------------------------------------------"
 	@echo "* Compiling for every OS and Platform..."
-	#CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_UNIX) -v
-	#GOOS=windows GOARCH=386 go build -o bin/main-windows-386 main.go
+	@CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_UNIX) -v
+	@GOOS=windows GOARCH=386 go build -o bin/main-windows-386 main.go
 
 ## exe: Executes the Go binary
 exe:
