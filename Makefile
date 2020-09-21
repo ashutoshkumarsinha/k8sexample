@@ -17,7 +17,7 @@ IMAGE_NAME=go-ping
 DEP_NAME=github.com/gin-gonic/gin
 IMAGE_VERSION=1.0
 
-all: clean format deps build image upload exe
+all: clean format deps build image uploaddh uploadgh exe
 
 ## help: Show command help
 help: Makefile
@@ -101,7 +101,7 @@ container:
 	@docker run --rm -p 3000:3000 --name $(CONTAINER_NAME) $(IMAGE_NAME)
 
 ## upload: Upload docker image on DockerHub
-upload:
+uploaddh:
 	@echo "-------------------------------------------"
 	@echo "* Uploading docker image to DockerHub..."
 	@echo "-------------------------------------------"
