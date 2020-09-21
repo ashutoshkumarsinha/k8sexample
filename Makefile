@@ -17,7 +17,7 @@ IMAGE_NAME=go-ping
 DEP_NAME=github.com/gin-gonic/gin
 IMAGE_VERSION=1.0
 
-all: clean format deps build exe image upload
+all: clean format deps build image upload exe
 
 ## help: Show command help
 help: Makefile
@@ -108,3 +108,10 @@ upload:
 	@docker tag $(IMAGE_NAME) ashutoshsinha/$(IMAGE_NAME):$(IMAGE_VERSION)
 	@docker login
 	@docker push ashutoshsinha/$(IMAGE_NAME):$(IMAGE_VERSION)
+
+## uploadgh: Upload docker image on GitHub
+uploadgh:
+	@docker images -q $(IMAGE_NAME)
+	@docker tag $(IMAGE_NAME) docker.pkg.github.com/ashutoshkumarsinha/k8sexample/$(IMAGE_NAME):$(IMAGE_VERSION)
+	@cat GH_TOKEN.txt | docker login docker.pkg.github.com -u ashutoshkumarsinha --password-stdin	
+	@docker push docker.pkg.github.com/ashutoshkumarsinha/k8sexample/$(IMAGE_NAME):$(IMAGE_VERSION)
