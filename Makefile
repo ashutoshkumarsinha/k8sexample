@@ -15,7 +15,7 @@ BINARY_NAME=main
 CONTAINER_NAME=go-ping
 IMAGE_NAME=go-ping
 DEP_NAME=github.com/gin-gonic/gin
-IMAGE_VERSION=1.0
+IMAGE_VERSION=1.0.0
 
 all: clean format deps build image uploaddh uploadgh exe
 
