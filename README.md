@@ -17,7 +17,7 @@ Makefile is used for housekeeping purpose.
 12.  Upload docker image on GitHub
 
 Future tasks:
-1. Create k8s yaml for this app
-2. Create helm chart for deployment
+1. Create k8s yaml for this app - done
+2. Create helm chart for deployment - done
 3. Add observability to golang program
 4. Add CI/CD concepts like Webhooks and Jenkins
