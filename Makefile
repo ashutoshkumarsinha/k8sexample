@@ -17,7 +17,7 @@ IMAGE_NAME=go-ping
 DEP_NAME=github.com/gin-gonic/gin
 IMAGE_VERSION=1.0.0
 
-all: clean format deps build image uploaddh uploadgh exe
+all: clean format deps build image uploaddh uploadgh exe ss
 
 ## help: Show command help
 help: Makefile
