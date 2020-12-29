@@ -15,6 +15,7 @@ Makefile is used for housekeeping purpose.
 10.  Execute docker image
 11.  Upload docker image on DockerHub
 12.  Upload docker image on GitHub
+13.  Added SonarQube support
 
 Future tasks:
 1. Create k8s yaml for this app - done
