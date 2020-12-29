@@ -108,6 +108,16 @@ uploaddh:
 	@docker tag $(IMAGE_NAME) ashutoshsinha/$(IMAGE_NAME):$(IMAGE_VERSION)
 	@docker login
 	@docker push ashutoshsinha/$(IMAGE_NAME):$(IMAGE_VERSION)
+	
+## ss: Execute Sonar Scanner
+ss:
+	@echo "-------------------------------------------"
+	@echo "* Executing Sonar Scanner..."
+	@echo "-------------------------------------------"
+	@brew install sonar-scanner
+	@docker run -d --name sonarqube -p 9000:9000 sonarqube
+	@open -a "Google Chrome" http://localhost:9000
+	@sonar-scanner -Dsonar.projectKey=gotest -Dsonar.sources=. -Dsonar.host.url=http://localhost:9000 -Dsonar.login=516f5620e069a51142de11f088174999bddd3dad
 
 ## uploadgh: Upload docker image on GitHub
 uploadgh:
